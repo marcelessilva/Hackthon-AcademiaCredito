@@ -1,5 +1,6 @@
 import express from "express"
 import path from "path"
+import sheet from "./sheet.js"
 
 import { fileURLToPath } from "url"
 const __filename = fileURLToPath(import.meta.url);
@@ -17,3 +18,9 @@ app.listen(PORT, () => {
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '/../index.html'));
 });
+
+app.get('/cadastro', function(req, res) {
+    const data = req.query
+    sheet.appendToSheet(data)
+    res.send('ok')
+}) 
