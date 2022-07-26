@@ -18,6 +18,19 @@ app.listen(Port, () => {
 })*/
 
 app.post("/requerente", (request, response) => {
+    /*{
+    "nome": "Sophia",
+    "cpf": "000.000.000-00",
+    "rg":"00.000.000-9",
+    "datanascimento":"14/06/1987",
+    "celular":"(00)98888-5555",
+    "email":"fulano@gmail.com",
+    "endereco":"Rua Josefina Costa, 123",
+    "bairro":"Maria das Dores",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "cep":"11660-220"
+}*/
     console.log(request.body);
     response.send("Sucesso")
 })
