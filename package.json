@@ -1,0 +1,16 @@
+{
+  "name": "Hackthon-AcademiaCREDITO",
+  "version": "1.0.0",
+  "description": "Hackathon ;)",
+  "main": "src/index.js",
+  "type": "module",
+  "repository": "https://github.com/ProfessorMAT/Hackthon-AcademiaCREDITO.git",
+  "author": "Grupo XPTO",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "scripts": {
+    "start": "node --experimental-modules src/index.js"
+  }
+}
