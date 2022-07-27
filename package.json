@@ -2,7 +2,7 @@
   "name": "hackthon-academiacredito",
   "version": "1.0.0",
   "description": "Hackathon ;)",
-  "main": "src/index.js",
+  "main": "app.js",
   "type": "module",
   "repository": {
     "type": "git",
@@ -15,10 +15,10 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "node --experimental-modules src/index.js"
+    "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.18.1",
-    "googleapis": "^105.0.0"
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
   }
 }
