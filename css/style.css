@@ -51,23 +51,34 @@ header .container img{
 }
 
 footer{
-    display: flex;
-    justify-content: center;
+    display: flex; 
+    flex-direction: row;   
+    justify-content:space-around ;
     padding: 0px;
     width: 100%;
     color: #F6B042;
     background-color: #533549;
     border-radius: 5px;
     border: 1px solid whitesmoke;
+    position: relative bottom;
 }
 
 button{
-
     justify-content: center;
     padding: 0px;
     width: 100%;
     color: #F6B042;
-    background-color: #533549;
-  
-    border: 1px solid whitesmoke;
+    background-color: #533549;  
+    border-style: none;
+    font-family: Cinzel, serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+a{
+    color: white;
+    text-transform: uppercase;
+    transition: all 250ms linear 0s;
+    padding: 1px;
+
 }
