@@ -59,7 +59,7 @@ footer{
     background-color: #533549;
     border-radius: 5px;
     border: 1px solid whitesmoke;
-    position: relative bottom;
+    flex-wrap: wrap;
 }
 
 button{
