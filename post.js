@@ -17,7 +17,7 @@ function post(url, body){
 
 function cadastrarRequerente(event){
     event.preventDefault()
-    let url = "https://jsonplaceholder.typicode.com/posts"
+    let url = "http://localhost:3000/requerente"
     let nome = document.getElementById("nome").value
     console.log(nome)
     let cpf = document.getElementById("cpf").value
