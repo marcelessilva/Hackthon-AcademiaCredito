@@ -29,13 +29,15 @@ img_curso {
 }
 
 .portfolio_container{
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 .section-title {
+    
     font-size: 4rem;
     font-weight: 900;
     color: black;
@@ -58,6 +60,7 @@ img_curso {
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 0;
+    display: flex;
 }
 #portfolio .portfolio-header h1{
     margin-bottom: 50px;
@@ -129,28 +132,9 @@ img_curso {
 
 /* Keyframes */
 
-@keyframes text_reveal{
-    100%{
-        color: white;
-    }
-}
-@keyframes text_reveal_name{
-    100%{
-        color: gold;
-        font-weight: 500px;
-    }
-}
 
-@keyframes text_reveal_box{
-    50%{
-        width:100%;
-        left:0;
-    }
-    100%{
-        width: 0;
-        left:100%
-    }
-}
+
+
 
 /* Media Query */
 @media only screen and (min-width: 768px) {
@@ -158,7 +142,7 @@ img_curso {
         flex-direction: row;
         height: 400px;
         margin: 0;
-        width: 100%;
+        width: 90%;
         border-radius: 0;
     }
     #portfolio .all-projects .project-info{
@@ -170,6 +154,19 @@ img_curso {
     #portfolio .project-item:nth-child(even) {
         flex-direction: row-reverse;
     }
+    .section-title {
+    
+        font-size: 4rem;
+        font-weight: 600;
+        color: black;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        text-align: center;
+       
+    }
+   
 
 
 }
