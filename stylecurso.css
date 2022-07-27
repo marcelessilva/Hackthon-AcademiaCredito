@@ -15,12 +15,12 @@ html{
 a{
     text-decoration: none;
 }
-img{
+img_curso {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-p {
+#contato p {
     font-size: 1.4rem;
     margin-top: 5px;
     line-height: 2.5rem;
@@ -28,7 +28,7 @@ p {
     letter-spacing: 0.05rem;
 }
 
-.container{
+.portfolio_container{
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -45,6 +45,7 @@ p {
     letter-spacing: 0.2rem;
     text-align: center;
 }
+
 
 
 

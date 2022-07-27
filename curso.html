@@ -5,13 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylecurso.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Academia do crédito</title>
 </head>
 
 <body>
-   
+    <header id="navegador_inicial">
+        <div class="container">
+            <a href="./index.html"><img src="./Logos/logo1.JPG" alt="logo" /></a>
+            <nav id="container-nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">
+                    <span id="hamburguer"></span>
+                </button>
+                <ul class="menu" role="menu">
+                    <li>
+                        <a href="#QuemSomos">Quem Somos</a>
+                    </li>
+                    <li>
+                        <a href="./curso.html">Microcrédito</a>
+                    </li>
+                    <li>
+                        <a href="#SejaParceiro">Seja Parceiro</a>
+                    </li>
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+                    <li>
+                        <a href="#equipe">Equipe</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <section id="portfolio">
-        <div class="portfolio container">
+        <div class="portfolio_container">
             <div class="portfolio header">
                 <h1 class="section-title"><span>Itinerário do Curso</span></h1>
             </div>
@@ -28,7 +56,7 @@
                         </ul>
                     </div>
                     <div class="project-img">
-                        <img src="./img-1.png" alt="img">
+                        <img src="./img-1.png" alt="img" id="img_curso">
                     </div>
                 </div>
                 <div class="project-item">
@@ -40,7 +68,7 @@
                         <p>Mantenha o foco e cumpra as etapas de estudo, faça os exercícios e não esqueça de realizar a avaliação.</p>
                     </div>
                     <div class="project-img">
-                        <img src="./img-1.png" alt="img">
+                        <img src="./img-1.png" alt="img" id="img_curso">
                     </div>
                 </div>
                 <div class="project-item">
@@ -56,7 +84,7 @@
 
                     </div>
                     <div class="project-img">
-                        <img src="./img-1.png" alt="img">
+                        <img src="./img-1.png" alt="img" id="img_curso">
                     </div>
                 </div>
                 <div class="project-item">
@@ -70,7 +98,7 @@
                         </ul>
                     </div>
                     <div class="project-img">
-                        <img src="./img-1.png" alt="img">
+                        <img src="./img-1.png" alt="img" id="img_curso">
                     </div>
                 </div>
                 <div class="project-item">
@@ -84,13 +112,31 @@
                         </ul>
                     </div>
                     <div class="project-img">
-                        <img src="./img-1.png" alt="img">
+                        <img src="./img-1.png" alt="img" id="img_curso">
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+    <footer>
+        <div><img src="./icon/android-chrome-192x192.png" alt="Academia do Crédito" id="img_curso"></div>
+        <div>
+            <address id="contato">
+                <h3>Academia do Crédito</h3>
+                <p>Contato (De segunda a sexta, das 10h às 17h)</p>
+                <p>(+55) 11 986960440 </p>
+                <p>E-mail: atendimento@academiadocredito.com</p>
+            </address>
+        </div>
+        <div><button type="button"><a href="#navegador_inicial">Voltar ao inicio</a></button></div>
+
+
+
+
+
+    </footer>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
