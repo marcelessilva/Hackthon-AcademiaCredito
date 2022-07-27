@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+form {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: Cinzel, serif;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #533549;
+}
+
+label{
+    display: block;
+    border: black solid 1px;
+    border-radius: 15%;
+    margin: 5px;
+
+}
+
+div{
+    display: block;
+    width: 200px;
+    margin: 5px 0;
+    text-align: left;
+
+}
+input{
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+    border: black solid 1px;
+
+}
