@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    
-    <form action="" method="post">
+    <script src="post.js"></script> 
+    <form  onsubmit="cadastrarRequerente(event)"> 
         <div>
-            <label for="name">Nome:</label>
+            <label for="nome">Nome:</label>
             <input type="text" id="nome" placeholder="Nome Completo" required>
         </div>
         <div>
@@ -24,8 +24,8 @@
             <input type="text" id="rg" maxlength="13" placeholder="00.000.000-00" required>
         </div>
         <div>
-            <label for="datanascimento">Data de Nascimento:</label>
-            <input type="date" id="datanascimento" maxlength="10" required>
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" maxlength="10" required>
         </div>
         <div>
             <label for="celular">Celular:</label>
@@ -85,8 +85,8 @@
             <input type="text" id="cep" maxlength="10" placeholder="00.000-000" required>
         </div>
         <div>
-            <label for="valorfinanciamento"> Qual o valor que deseja financiar? </label>
-            <input type="number" id="valorfinanciamento" min="1" max="200" required>
+            <label for="valorFinanciamento"> Qual o valor que deseja financiar? </label>
+            <input type="number" id="valorFinanciamento" min="1" max="5000" required>
         </div> <br>
         <div>
             <label for="projeto">Conte-nos um pouco sobre a sua ideia!</label>
@@ -96,6 +96,7 @@
             <label for="dificuldades">Quais são suas maiores dificuldades para iniciar sua ideia?</label>
             <textarea name="dificuldades" id="dificuldades" cols="60" rows="10" required>Minhas dificuldades são </textarea>
         </div> <br>
+
         <div>
             <button type="submit">Enviar</button>
         </div>
