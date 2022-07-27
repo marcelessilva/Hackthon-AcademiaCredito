@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador</title>
+</head>
+<body>
+    <h2>Simulador de Financiamento</h2>
+    <label for="listValue">Escolha o valor a ser financiado:</label>
+    <select id="listValue">
+        <option value="500">R$ 500,00</option>
+        <option value="1000">R$ 1000,00</option>
+        <option value="1500">R$ 1500,00</option>
+        <option value="2000">R$ 2000,00</option>
+        <option value="2500">R$ 2500,00</option>
+        <option value="3000">R$ 3000,00</option>
+        <option value="3500">R$ 3500,00</option>
+        <option value="4000">R$ 4000,00</option>
+        <option value="4000">R$ 4500,00</option>
+        <option value="4000">R$ 5000,00</option>
+    </select> <br>
+    
+    <input id="deadlineText" type="text" placeholder="Prazo em meses" required> <br>
+    <input id="downPaymentText" type="text" placeholder="Valor da Entrada" required> <br>
+    <button id="buttonCalculate">Calcular</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Valor da Parcela</th>
+                <th>Amortização</th>
+                <th>Juros</th>
+                <th>Saldo Devedor</th>
+            </tr>
+        </thead>
+        <tbody id="bodyTable">
+
+        </tbody>
+    </table>
+
+    <script type="module" src="./simulator.js"></script>
+</body>
+</html>
