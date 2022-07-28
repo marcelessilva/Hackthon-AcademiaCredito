@@ -6,7 +6,7 @@ import cors from "cors";
 import pkg from 'pg';
 const { Client } = pkg;
 
-const url = "postgres://postgres:admin@localhost:5432/ACADEMIA_CREDITO";
+const url = "DB URL AQUI";
 const client = new Client({
     connectionString: url
 })
