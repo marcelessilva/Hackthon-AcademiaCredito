@@ -23,6 +23,7 @@ header nav ul li a {
     font-size: 15px;
     padding: 10px;
     transition: all 250ms linear 0s;
+    flex-wrap: wrap;
 }
 
 header .container img{
@@ -40,7 +41,7 @@ header .container img{
 }
 
 .menu{
-    display: flex;
+    display: flex;    
     list-style: none;
     gap: .5rem;
 }
@@ -48,4 +49,41 @@ header .container img{
 #btn-mobile{
     display: none;
    
+}
+
+footer{
+    display: flex; 
+    justify-content:space-between ;
+    padding: 0px;
+    width: 100%;
+    color: #F6B042;
+    background-color: #533549;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    flex-wrap: wrap;
+}
+
+button{
+    justify-content: center;
+    padding: 70px;
+    width: 100%;
+    color: #F6B042;
+    background-color: #533549;  
+    border-style: none;
+    font-family: Cinzel, serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+a{
+    color: white;
+    text-transform: uppercase;
+    transition: all 250ms linear 0s;
+    
+
+}
+
+address{
+    justify-content: center;
+    padding: 50px;
 }

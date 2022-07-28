@@ -10,6 +10,7 @@
     background: none;
     cursor: pointer;
     gap: .5rem;
+    
 }
 
 #hamburguer{
@@ -49,14 +50,14 @@
 }
 
 .menu{
-    display: none;
+    display: inline-block;
     position: absolute;
     margin-top: 22px;
     flex-direction: column;
     width: 100vw;
     justify-content: center;
     align-items: center;
-    left: 100%;
+    left: 1%;
     transform: translateX(100vw);
     transition: 0.5s ease transform;
 }
