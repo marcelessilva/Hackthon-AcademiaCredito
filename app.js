@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 //subindo servidor
-const Port = 3000;
+const Port = process.env.PORT || 3000;
 app.listen(Port, () => {
     console.log("Servidor Rodando na porta " + Port);
 });
