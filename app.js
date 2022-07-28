@@ -4,9 +4,9 @@ import cors from "cors";
 
 //configuracao do banco de dados
 import pkg from 'pg';
-const {Client} = pkg;
+const { Client } = pkg;
 
-const url = "database url aqui";
+const url = "postgres://postgres:admin@localhost:5432/ACADEMIA_CREDITO";
 const client = new Client({
     connectionString: url
 })
@@ -23,35 +23,62 @@ app.use(bodyParser.urlencoded({
 //subindo servidor
 const Port = 3000;
 app.listen(Port, () => {
-    console.log("Servidor Rodando na porta " + Port)
+    console.log("Servidor Rodando na porta " + Port);
 });
 
 //api
 app.post("/requerente", (request, response) => {
-    const requerente = request.body;
-    const insertQuery= `INSERT INTO public.requerente(
+    salvarRequerente(request.body, response);
+});
+
+function salvarRequerente(body, response) {
+    const requerenteInsertQuery = `INSERT INTO public.requerente(
         nome, cpf, rg, celular, datanascimento, email, endereco, bairro, cidade, estado, cep)
-        VALUES ('${requerente.nome}', 
-            '${requerente.cpf}', 
-            '${requerente.rg}', 
-            '${requerente.celular}', 
-            '${requerente.dataNascimento}', 
-            '${requerente.email}',
-            '${requerente.endereco}', 
-            '${requerente.bairro}',
-            '${requerente.cidade}', 
-            '${requerente.estado}', 
-            '${requerente.cep}'
-        );` 
-    
-    client.query(insertQuery, (err,result) => {
+        VALUES ('${body.nome}', 
+            '${Number(body.cpf)}', 
+            '${body.rg}', 
+            '${body.celular}', 
+            '${body.dataNascimento}', 
+            '${body.email}',
+            '${body.endereco}', 
+            '${body.bairro}',
+            '${body.cidade}', 
+            '${body.estado}', 
+            '${body.cep}'
+        );`
+
+    client.query(requerenteInsertQuery, (err, result) => {
         if (!err) {
-            console.log(result)
-            response.status(201).send("Requerente foi inserido com sucesso")
-            client.end();
+            salvarProjeto(body, response);
         } else {
-            response.status(500).send("Erro ao inserir requerente")
-            client.end();
+            responderErroQuery("Erro ao inserir requerente", err, response);
         }
     });
-});
+}
+
+function salvarProjeto(body, response) {
+    const projetoInsertQuery = `INSERT INTO public.projeto(
+        valor, resumoideia, dificuldadesideia, requerente_id)
+        VALUES (
+            '${body.valorFinanciamento}', 
+            '${body.projeto}', 
+            '${body.dificuldades}', 
+            ${Number(body.cpf)}
+        );`
+
+    client.query(projetoInsertQuery, (err, result) => {
+        if (!err) {
+            response.status(201).send("inserido com sucesso");
+
+        } else {
+            responderErroQuery("Erro ao inserir projeto", err, response);
+        }
+    })
+}
+
+function responderErroQuery(msg, erro, response) {
+    console.log(msg, erro);
+    if (response) {
+        response.status(500).send(msg+" "+erro.detail);
+    }
+}
