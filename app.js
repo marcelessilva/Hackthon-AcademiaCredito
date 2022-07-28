@@ -6,9 +6,12 @@ import cors from "cors";
 import pkg from 'pg';
 const { Client } = pkg;
 
-const url = "DB URL AQUI";
+const url = process.env.DATABASE_URL;
 const client = new Client({
-    connectionString: url
+    connectionString: url,
+    ssl: {
+        rejectUnauthorized: false
+    }
 })
 client.connect();
 
