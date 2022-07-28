@@ -1,11 +1,11 @@
 Setup application
 
 ```
-yarn
+npm install
 ```
 
 Start application
 
 ```
-yarn start
+npm start
 ```

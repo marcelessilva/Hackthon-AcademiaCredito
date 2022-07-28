@@ -1,29 +1,29 @@
-div {
+#simulador div {
     margin: 8px;
 }
 
-button :hover {
+#simulador button :hover {
     cursor: pointer;
 }
 
-button{
-    width: 400px;
+#simulador button {
+    padding: 20px 40px;
     font-size: 18px;
-    height: 30px;
     margin-bottom: 13px;
     border-radius: 20px;
+    width: auto;
 }
 
-body {
+#simulador {
     display: flex;
     align-items: center;
     width: 100%;
     padding-top: 30px;
     text-align: center;
     flex-direction: column;
-}
+} 
 
-input {
+#simulador input {
     width: 160px;
     padding-left: 15px;
     font-size: 18px;
@@ -33,7 +33,7 @@ input {
     border: 2px solid hsl(0, 55%, 38%);
 }
 
-select {
+#simulador select {
     width: 160px;
     padding-left: 15px;
     font-size: 18px;
@@ -43,6 +43,6 @@ select {
     border: 2px solid hsl(0, 55%, 38%);
 }
 
-label {
+#simulador label {
     font-size: 20px;
 }

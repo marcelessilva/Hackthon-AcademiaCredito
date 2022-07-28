@@ -87,3 +87,7 @@ address{
     justify-content: center;
     padding: 50px;
 }
+
+main {
+    padding: 2rem;
+}
