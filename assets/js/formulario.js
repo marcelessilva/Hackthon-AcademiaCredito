@@ -8,7 +8,7 @@ function post(url, body){
     request.send(JSON.stringify(body))
 
     request.onload = function() {
-        console.log(this.responseText)
+        alert(this.responseText)
     }
 
     return request.responseText
