@@ -1,0 +1,150 @@
+@media (max-width: 1000px){
+
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    
+    #hamburguer{
+      display: block;
+      color: #F6B042;
+      border-top: 2px solid;
+      width: 20px;  
+    }
+    
+    #hamburguer::after, #hamburguer::before{
+     content: '';
+     display: block;  
+     width: 20px;
+     height: 2px;
+     background: currentColor; 
+     margin-top: 5px;
+     transition: .3s;
+     position: relative;
+    }
+    
+    #container-nav.active #hamburguer{
+       border-top: none;   
+    }
+    
+    #container-nav.active #hamburguer::before{
+       transform: rotate(135deg);   
+    }
+    
+    #container-nav.active #hamburguer::after{
+      transform: rotate(-135deg);
+      top: -7px; /* Para alinhar o X. No entanto, precisa do position Relative em 
+                    #hamburguer::after, #hamburguer::before para funcionar */
+    }
+    
+    #container-nav{
+        margin-bottom: 6px;
+    }
+    
+    .menu{
+        display: none;
+        position: absolute;
+        margin-top: 22px;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        left: 100%;
+        transform: translateX(100vw);
+        transition: 0.5s ease transform;
+    }
+    
+    .menu>li {
+        
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+        width: 100%;
+        color: #F6B042;
+        background-color: #533549;
+        border-radius: 5px;
+        border: 1px solid whitesmoke;
+    }
+    
+    .menu li a {
+        flex: 1;
+        text-align: center;
+    }
+    
+    
+    #container-nav.active .menu{
+        display: block;
+        transform: translateX(-100vw);
+        transition: 0.5s ease transform;
+        
+    }
+    
+    main .container-main div {
+        margin: auto;
+    }
+
+    main .container-main img {
+        display: none;
+    }
+
+    h2 {
+        margin-left: 50px;
+        
+    }
+
+    div h3 {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    
+    }
+    
+    @media (max-width: 780px){ 
+    
+        #btn-footer{
+        display: none;
+         
+     }
+     
+     #frase-potencia{
+        font-size: 7px;
+    }
+
+    }
+    
+    @media (max-width: 600px){ 
+    
+        
+        #address-footer{
+            font-size: 12px;
+            margin-top: 40px;   
+        }
+     
+    
+    }
+    
+    @media (max-width: 400px){ 
+    
+        
+        #address-footer{
+            font-size: 9px;
+            margin-top: 30px;   
+        }
+    
+        #footer img{
+            height: 100px;
+            margin-left: 5px;
+            } 
+    
+    }
+    
+
+
+
+

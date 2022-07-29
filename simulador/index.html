@@ -5,44 +5,44 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="./icon/favicon-16x16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/stylecurso.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/assets/icon/favicon-32x32.png" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
-    <link rel="stylesheet" href="/assets/css/simulator.css" />
+    <link rel="stylesheet" href="./simulator.css" />
     <title>Academia do crédito</title>
 </head>
 
 <body>
     <header id="navegador_inicial">
         <div class="container">
-            <a href="/"><img src="/assets/logos/logo1.JPG" alt="logo" /></a>
-            <nav id="container-nav">
-                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
-                    aria-expanded="false">
-                    <span id="hamburguer"></span>
-                </button>
-                <ul class="menu" role="menu">
-                    <li>
-                        <a href="#QuemSomos">Quem Somos</a>
-                    </li>
-                    <li>
-                        <a href="/curso">Microcrédito</a>
-                    </li>
-                    <li>
-                        <a href="/simulador">Simulador</a>
-                    </li>
-                    <li>
-                        <a href="#SejaParceiro">Seja Parceiro</a>
-                    </li>
-                    <li>
-                        <a href="#contato">Contato</a>
-                    </li>
-                    <li>
-                        <a href="#equipe">Equipe</a>
-                </ul>
-            </nav>
+            <img src="../assets/Logos/logo1.JPG" alt="logo" />
+            <form>
+                <a href="../index.html">
+                    <input type="button" id="btn-mainpage"/>
+                </a>
+            </form>
+                    <nav id="container-nav">
+                        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" 
+                                            aria-expanded="false">
+                            <span id="hamburguer"></span>
+                        </button>
+                        <ul class="menu" role="menu">
+                            <li>
+                                <a href="../QuemSomos/index.html">Quem Somos</a>
+                            </li>
+                            <li>
+                                <a href="../curso/index.html">Microcrédito</a>
+                            </li>
+                            <li>
+                                <a href="../apoiador/index.html">Seja Parceiro</a>
+                            </li>
+                            <li>
+                                <a href="#footer">Contato</a>
+                            </li>
+                            <li>
+                                <a href="../equipe/equipe.html">Equipe</a>
+                            </li>
+                        </ul>
+                    </nav>
         </div>
     </header>
     <section id="simulador">
@@ -63,16 +63,16 @@
             </select> <br>
         </div>
         <div>
-            <label for="deadlineText">Qual será o prazo em meses?</label>
+            <label for="deadlineText">Digite, em meses, o prazo desejado:</label>
         <input id="deadlineText" type="text" required> 
         </div>
         <div>
-            <label for="downPaymentText">Informe o valor da entrada:</label>
+            <label for="downPaymentText">Valor de entrada(*Mínimo R$0,00):</label>
             <input id="downPaymentText" type="text" required>
         </div>
-        <button id="buttonCalculate">Calcular</button>
+        <button id="buttonCalculate" type="button"> <b>Calcular</b></button>
         <table>
-            <thead>
+            <thead id="tabelaSim">
                 <tr>
                     <th>Número</th>
                     <th>Valor da Parcela</th>
@@ -87,21 +87,24 @@
         </table>
 
     </section>
-    <footer>
-        <div><img src="/assets/icon/android-chrome-192x192.png" alt="Academia do Crédito" id="img_curso"></div>
+    <footer id="footer">
+        <div><img src="../assets/android-chrome-192x192.png" alt="Academia do Crédito"></div>
         <div>
-            <address id="contato">
-                <h3>Academia do Crédito</h3>
-                <p>Contato (De segunda a sexta, das 10h às 17h)</p>
-                <p>(+55) 11 986960440 </p>
-                <p>E-mail: atendimento@academiadocredito.com</p>
+            <address id="address-footer">
+                <p>Contato (De seg/sex, das 10h às 17h)</p>
+                <p>(+55) 11 98696-0440 </p>
+                <p>E-mail: atend@academiadocredito.com</p>
             </address>
         </div>
-        <div><button type="button"><a href="#navegador_inicial">Voltar ao inicio</a></button></div>
+        <div id="div-footer"> 
+            <button id="btn-footer" type="button">
+                        <a href="#navegador_inicial"><b>Voltar ao início</b></a>
+                    </button>
+        </div>
     </footer>
     
-    <script type="module" src="/assets/js/menu.js"></script>
-    <script type="module" src="/assets/js/simulator.js"></script>
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/simulator.js"></script>
 </body>
 
 </html>

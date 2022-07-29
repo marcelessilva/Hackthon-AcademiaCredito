@@ -1,0 +1,277 @@
+/* CSS PRÁTICA */
+
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+@import url('https://fonts.googleapis.com/css2?family=Fauna+One&display=swap');
+
+
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: Cinzel, serif;
+}
+
+/* HEADER */
+
+
+header{
+    border: 2px solid #F6B042;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+}
+nav a:hover{
+    background: #F6B042;
+  
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: Cinzel, serif;
+    font-size: 15px;
+    padding: 10px;
+    transition: all 350ms linear 0s;
+    
+}
+
+header .container img{
+    height: 50px;
+}
+
+.container{
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center ;
+    background-color: #533549;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#btn-mobile{
+    display: none;
+   
+}
+
+#btn-mainpage{
+    opacity: 0;
+    position: fixed;
+    cursor:pointer;
+    margin-top: -17px;
+    left: 34px;
+    height: 40px;
+    width: 240px; 
+   
+} 
+
+/*RESPONSIVE*/
+@media (max-width: 1000px){
+
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    
+    #hamburguer{
+      display: block;
+      color: #F6B042;
+      border-top: 2px solid;
+      width: 20px;  
+    }
+    
+    #hamburguer::after, #hamburguer::before{
+     content: '';
+     display: block;  
+     width: 20px;
+     height: 2px;
+     background: currentColor; 
+     margin-top: 5px;
+     transition: .3s;
+     position: relative;
+    }
+    
+    #container-nav.active #hamburguer{
+       border-top: none;   
+    }
+    
+    #container-nav.active #hamburguer::before{
+       transform: rotate(135deg);   
+    }
+    
+    #container-nav.active #hamburguer::after{
+      transform: rotate(-135deg);
+      top: -7px; /* Para alinhar o X. No entanto, precisa do position Relative em 
+                    #hamburguer::after, #hamburguer::before para funcionar */
+    }
+    
+    #container-nav{
+        margin-bottom: 6px;
+    }
+    
+    .menu{
+        display: none;
+        position: absolute;
+        margin-top: 22px;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        left: 100%;
+        transform: translateX(100vw);
+        transition: 0.5s ease transform;
+    }
+    
+    .menu>li {
+        
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+        width: 100%;
+        color: #F6B042;
+        background-color: #533549;
+        border-radius: 5px;
+        border: 1px solid whitesmoke;
+    }
+    
+    .menu li a {
+        flex: 1;
+        text-align: center;
+    }
+    
+    
+    #container-nav.active .menu{
+        display: block;
+        transform: translateX(-100vw);
+        transition: 0.5s ease transform;
+        
+    }
+    
+    
+    }
+
+    /*FORMULÁRIO*/
+
+body{
+   background-color:#533549;
+}
+    
+    
+
+#cadastro{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+h1{
+    font-family: Cinzel, serif;;
+    color: #F6B042
+}
+
+
+form > div, fieldset, fieldset > div{
+    margin-bottom: 10px;
+    padding: 5px 0;
+    font-family: 'Fauna One', serif;
+    font-size: 14px;
+    border: none;
+    color: #F6B042
+}
+
+
+fieldset{
+    padding: 0;
+   
+}
+
+
+
+
+textarea{
+    vertical-align: text-top;
+    width: 400px;
+    height: 150px;
+}
+
+input[type=text], input[type=mail]{
+    width: 400px;
+}
+
+input:hover{
+    background-color: #AAA;
+}
+
+
+
+label{
+    display: inline-block; 
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+.cadastro label{
+    display: inline;
+    margin-left: 100px;
+    padding: 0;
+    
+}
+
+#botao{
+    margin-left: 100px;
+    height: 30px;
+} 
+
+
+
+p{
+    margin-left: 100px;
+    font-size: 10px;
+    color: #F6B042
+}
+
+@media (max-width: 540px){
+
+
+    textarea{
+        vertical-align: text-top;
+        width: 220px;
+        height: 200px;
+    }
+    
+    input[type=text], input[type=mail]{
+        width: 220px;
+    }
+    
+    
+    #botao{
+        margin-left: 100px;
+    }
+    
+
+
+}
+
+
+
+

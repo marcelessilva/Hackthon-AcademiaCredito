@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Fauna+One&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html,
+body {
+    font-family: 'Fauna One', serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+} 
+
+/* HEADER */
+
+
+
+nav a:hover{
+    background: #F6B042;
+  
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: Cinzel, serif;
+    font-size: 15px;
+    padding: 10px;
+    transition: all 350ms linear 0s;
+    
+}
+
+header .container img{
+    height: 50px;
+}
+
+.container{
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center ;
+    background-color: #533549;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#btn-mobile{
+    display: none;
+   
+}
+
+#btn-mainpage{
+    opacity: 0;
+    position: fixed;
+    cursor:pointer;
+    margin-top: -17px;
+    left: 34px;
+    height: 40px;
+    width: 240px; 
+   
+} 
+
+
+/* MAIN */
+
+#frase-potencia{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: #533549;
+   
+}
+
+main {
+    margin-bottom: 10px;
+}
+
+
+.container-text{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 100px auto 0px auto; 
+
+}
+
+h2{
+    color: rgb(0,0,0);
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+
+
+#foto1{
+  
+    width: 100%;
+    height: 180px;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* CARDS */
+
+#imgCards img{
+    width: 600px;
+}
+
+#banner1{
+    margin-top: 52px;
+}
+
+
+.cards {
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    
+}
+
+.text--medium{
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    color:#533549;
+    text-align:center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px -4px #000000;
+    transition: all 0.3s ease 0s;
+    border-radius: 10px;
+    background-color: #F6B042;
+}
+
+.card:hover{
+    transform: translateY(-7px);
+}
+
+.image {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    height: 225px;
+}
+
+.image img{
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+.content {
+    margin:20px;
+}
+
+.title{
+    margin-bottom:0px;
+}
+
+
+
+#fot2{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+#fot3{
+    margin-top: 70px;
+}
+
+#fot4{
+    margin-top: 150px;
+}
+
+#fot5{
+    margin-top: 150px;
+}
+#fot6{
+    margin-top: 80px;
+   
+} 
+
+
+/*FOOTER*/
+
+
+footer{
+    
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0px;
+    color: #F6B042;
+    background-color:#533549;
+    bottom: 0;
+    position: relative;
+    margin-top: 20px;
+  
+
+    }
+
+
+
+#footer img{
+height: 136px;
+margin-left: 20px;
+}
+
+#btn-footer{
+   
+    width: 190px;
+    background-color:#F6B042;
+    border-style:none;
+    border-radius: 10px;
+    font-family: Cinzel, serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: 60px;
+   
+
+}
+
+#div-footer a{
+    color:#533549;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#address-footer{
+    font-family: Cinzel, serif;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 38px;
+
+}
+
