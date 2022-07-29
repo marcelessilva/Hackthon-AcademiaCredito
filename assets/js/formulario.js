@@ -17,7 +17,7 @@ function post(url, body){
 
 function cadastrarRequerente(event){
     event.preventDefault()
-    let url = "http://localhost:3000/requerente"
+    let url = "https://academiacredito.herokuapp.com/requerente"
     let nome = document.getElementById("nome").value
     console.log(nome)
     let cpf = document.getElementById("cpf").value
